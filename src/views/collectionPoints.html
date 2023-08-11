@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>DescartEco | Pontos Cadastrados</title>
+{% endblock title %}
+    
+{% block style %}
+    <link rel="stylesheet" href="styles/styleCollectionPoints.css">
+{% endblock style %}
+
+{% block header %}
+    {% include "partials/header.html" %}
+{% endblock header %}
+
+{% block content %}
+    <div class="main-container">
+        <h2>Pontos cadastrados em {{ city }}</h2>
+        <section class="cards">
+            {% for point in points %}
+                <div class="card">
+                    <div class="content">
+                        <div class="title-card">
+                            <h4 class="title-case">NOME DO LOCAL</h4>
+                            <p class="info">{{ point.name }}</p>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h4 class="title-case">RESÍDUOS ACEITOS</h4>
+                        <p class="info">{{ point.itens }}</p>
+                    </div>
+
+                    <div class="description">
+                        <h4 class="title-case">ENDEREÇO</h4>
+                        <p class="info">{{ point.address}}. {{point.complement}}</p>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </section>
+
+        <footer class="footer-info">
+            <h4>Não encontrou o ponto de coleta? Informe no contatos abaixo: </h4>
+            <a class="links" href="mailto:descartecopev@gmail.com">E-mail: descartecopev@gmail.com</a>
+        </footer>
+    </div>
+{% endblock content %}

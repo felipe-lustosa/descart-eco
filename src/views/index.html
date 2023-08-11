@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+    
+{% block title %}
+    <title>DescartEco</title>
+{% endblock title %}
+    
+{% block style %}
+    <link rel="stylesheet" href="styles/styleIndex.css">
+{% endblock style %}
+
+{% block header %}
+    <header class="header container">
+    <div class="header-container">
+        <div class="logo">
+            <a href="/">
+                <img src="Assets/img/ir-verde.png" alt="Logo DescartEco" title="Logo DescartEco">
+                <h1>DescartEco</h1>
+            </a>
+        </div>
+        <nav>
+            <div class="register">
+                <a href="/register">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <h3>Cadastrar ponto no Vale</h3>
+                </a>
+            </div>
+        </nav>
+    </div>
+    </header>
+{% endblock header %}
+
+{% block content %}
+    <div class="main-container">
+        <div class="wrapper">
+            <section class="banner-info">
+                <div class="title-main">
+                    <h2>Auxílio no descarte e coleta adequados.</h2>
+                </div>
+                <div class="description">
+                    <p>Banco de dados público com pontos de coleta no Vale de São Francisco.</p>
+                </div>
+                <h2 class="title-button">Pontos de Coleta</h2>
+                <div class="button">
+                    <form action="/points" method="GET">
+                        <button type="submit" name="city" value="Petrolina">Petrolina</button>
+                        <button type="submit" name="city" value="Juazeiro">Juazeiro</button>
+                    </form>
+                </div>
+            </section>
+            <section class="banner-image">
+                <img src="Assets/img/capa-remove.png" alt="">
+            </section>
+        </div>
+
+        <footer class="footer-content">
+            <a href="/about-us" class="about">
+                <img src="Assets/img/pev-remove.png" alt="">
+                <h3>Quem somos</h3>
+            </a>
+            <a href="/know-more" class="about">
+                <h3>Saiba Mais</h3>
+            </a>
+        </footer>
+    </div>
+{% endblock content %}

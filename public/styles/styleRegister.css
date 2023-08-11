@@ -1,0 +1,356 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 42px 160px;
+}
+
+.logo a,
+.register a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo h1 {
+    color: #322153;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.register i {
+    color: #4996FF;
+    font-size: 24px;
+}
+
+.register h3 {
+    color: #322153;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width: 748px;
+    background-color: #FFF;
+    padding: 64px;
+    border-radius: 8px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    color: #322153;
+    font-weight: 700;
+    margin-bottom: 8px;
+    max-width: 270px;
+}
+
+.wrapper p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #6C6C80;
+    max-width: 500px;
+    margin-bottom: 48px;
+}
+
+.info-local {
+    display: flex;
+    gap: 20px;
+}
+
+legend h2{
+    color: #322153;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    color: #6C6C80;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.field input,
+.field-group select {
+    max-width: 608px;
+    padding: 18px;
+    background-color: #F0F0F5;
+    color: #322153;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 24px
+
+}
+
+.field-group {
+    max-width: 608px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.field-group select {
+    max-width: 292px;
+    padding: 18px;
+}
+
+.title-two {
+    margin-top: 40px;
+}
+
+.groups {
+    display: flex;
+    justify-content: space-between;
+}
+
+.type {
+    margin-bottom: 20px;
+}
+
+.type label {
+    font-size: 18px;
+    color: #322153;
+    margin-left: 8px;
+}
+
+#error-message {
+    color: #FF0000;
+    display: none;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+form h4 {
+  margin-top: 20px;
+  color: #322153;
+}
+
+.button-points {
+    padding: 20px 40px;
+    color: #FFF;
+    background-color: #4996FF;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.button-points:hover {
+    opacity: 0.9;
+}
+
+/* === MODAL === */
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.fa-check {
+    position: relative;
+    z-index: 1; 
+    transition: all 1s ease-in-out; 
+}
+
+.modal-overlay i {
+    font-size: 45px;
+    color: #FFF;
+    padding: 10px;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+}
+
+.modal-overlay:hover i {
+    color: #4996FF;
+    border-color: #4996FF;
+}
+
+.modal-overlay h4 {
+    color: #FFF;
+    font-size: 32px;
+    margin-top: 16px;
+
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width: 768px) {
+    .header-container {
+      margin: 24px 16px;
+    }
+  
+    .wrapper {
+      padding: 32px;
+    }
+  
+    .wrapper h1 {
+      font-size: 24px;
+      max-width: 100%;
+    }
+  
+    .wrapper p {
+      font-size: 16px;
+      max-width: 100%;
+    }
+  
+    .field input,
+    .field-group select {
+      max-width: 100%;
+    }
+  
+    .field-group {
+      grid-template-columns: 1fr;
+    }
+  
+    .button-points {
+      padding: 16px 32px;
+      font-size: 14px;
+      margin-top: 24px;
+    }
+  }
+  
+  @media(max-width: 480px) {
+    .header-container {
+      margin: 16px 8px;
+    }
+
+    .register h3 {
+        font-size: 0px;
+    }
+  
+    .wrapper {
+      padding: 16px;
+    }
+  
+    .wrapper h1 {
+      font-size: 20px;
+    }
+  
+    .wrapper p {
+      font-size: 14px;
+    }
+  
+    .field input,
+    .field-group select {
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  
+    .title-two {
+      margin-top: 24px;
+    }
+  
+    .button-points {
+      padding: 12px 24px;
+      font-size: 12px;
+      margin-top: 16px;
+    }
+
+    form h4 {
+      font-size: 12px;
+    }
+  }
+
+  @media(max-width: 425px) {
+    .header-container {
+      margin: 16px 8px;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    .wrapper {
+      padding: 16px;
+    }
+  
+    .wrapper h1 {
+      font-size: 20px;
+    }
+  
+    .wrapper p {
+      font-size: 14px;
+    }
+  
+    .field input,
+    .field-group select {
+      padding: 12px;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+  
+    .title-two {
+      margin-top: 24px;
+    }
+  
+    .button-points {
+      padding: 12px 24px;
+      font-size: 12px;
+      margin-top: 16px;
+    }
+  }
+  
+  /* Responsividade para 375px */
+  @media screen and (max-width: 375px) {
+    .header-container {
+      margin: 16px 8px;
+    }
+  
+    .wrapper {
+      padding: 16px;
+    }
+  
+    .wrapper h1 {
+      font-size: 20px;
+    }
+  
+    .wrapper p {
+      font-size: 14px;
+    }
+  
+    .field input,
+    .field-group select {
+      padding: 12px;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+  
+    .title-two {
+      margin-top: 24px;
+    }
+  
+    .button-points {
+      padding: 12px 20px;
+      font-size: 12px;
+      margin-top: 16px;
+    }
+
+    .groups {
+        flex-direction: column;
+    }
+  }
+  
